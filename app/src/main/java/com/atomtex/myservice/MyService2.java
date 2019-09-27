@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class MyService2 extends Service {
 
+    //Самый простой сервис
+
     /**
      * There can only be one instance of a Service at a time
      * No matter how you create it, there can only ever be one instance at a time,
