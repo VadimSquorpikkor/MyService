@@ -11,6 +11,8 @@ import android.util.Log;
 
 public class MyService extends Service {
 
+    //основной сервис -- с BroadCast, если нужен Notification -- взять в Service3
+
     final String LOG_TAG = "myLogs";
     ExecutorService es;
 

@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     final String LOG_TAG = "myLogs";
 
+    //В основном код активити для сервиса1. Для 2 и 3 нужно всего несколько строчек --
+    // 3 строчки в onCreate -- fvb<...>, методы: start()(для 2 и 3), stop()
     /////////////////////////
     final int TASK1_CODE = 1;
     final int TASK2_CODE = 2;
@@ -117,14 +119,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void start() {
-        //!!! это не метод MyService, это метод Service!!!!
+    //метод для сервиса 2 и 3
+    /*public void start() {
+            //!!! это не метод MyService, это метод Service!!!!
 //        startService(new Intent(this, MyService.class));
 
-//        startService(new Intent(this, MyService.class).putExtra("time", 7));
-//        startService(new Intent(this, MyService.class).putExtra("time", 2));
-//        startService(new Intent(this, MyService.class).putExtra("time", 4));
+        startService(new Intent(this, MyService.class).putExtra("time", 7));
+        startService(new Intent(this, MyService.class).putExtra("time", 2));
+        startService(new Intent(this, MyService.class).putExtra("time", 4));
+        }*/
 
+    public void start() {
 
         Intent intent;
         // Создаем Intent для вызова сервиса,
@@ -144,12 +149,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    //метод для сервиса 2 и 3
     public void stop() {
         //!!! это не метод MyService, это метод Service!!!!
         stopService(new Intent(this, MyService.class));
     }
 
+    //метод для сервиса 2
     public void stop2() {
         //!!! это не метод MyService, это метод Service!!!!
         stopService(new Intent(this, MyService2.class));
